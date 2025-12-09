@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalBody.innerHTML = `
                         <h2 style="margin-bottom: 20px; color: #D4AF37;">HTML Essentials</h2>
                         <div class="cert-container">
-                            <img src="/images/cisco-certificate.jpg" alt="Cisco Certificate" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                            <img src="./images/cisco-certificate.jpg" alt="Cisco Certificate" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
                         </div>
                     `;
                 }
@@ -250,5 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
 
 });
