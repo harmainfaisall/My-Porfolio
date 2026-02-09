@@ -59,6 +59,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Mobile Navigation Logic ---
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links li');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            // Toggle Nav
+            navLinks.classList.toggle('nav-active');
+
+            // Hamburger Animation
+            hamburger.classList.toggle('toggle');
+
+            // Animate Links
+            navLinksItems.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+        });
+
+        // Close menu when clicking a link
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                hamburger.classList.remove('toggle');
+
+                navLinksItems.forEach(item => {
+                    item.style.animation = '';
+                });
+            });
+        });
+    }
+
     // Performance Metrics (Mockup for now)
     const loadTimeDisplay = document.getElementById('load-time');
     // Calculate load time
