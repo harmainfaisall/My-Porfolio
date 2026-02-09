@@ -236,6 +236,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="./images/cisco-certificate.jpg" alt="Cisco Certificate" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
                         </div>
                     `;
+                } else if (certType === 'css') {
+                    modalBody.innerHTML = `
+                        <h2 style="margin-bottom: 20px; color: #D4AF37;">CSS Essentials</h2>
+                        <div class="cert-container">
+                            <img src="./images/css certificate.jpg" alt="CSS Certificate" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                        </div>
+                    `;
+                } else if (certType === 'js') {
+                    modalBody.innerHTML = `
+                        <h2 style="margin-bottom: 20px; color: #D4AF37;">JavaScript Essentials</h2>
+                        <div class="cert-container">
+                            <img src="./images/javascript certifite.jpg" alt="JavaScript Certificate" style="max-width: 100%; height: auto; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                        </div>
+                    `;
                 }
             });
         });
@@ -250,6 +264,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-
 
 });
